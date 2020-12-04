@@ -1,7 +1,7 @@
 package com.conveyal.analysis.controllers;
 
 import com.conveyal.analysis.AnalysisServerException;
-import com.conveyal.analysis.components.Components;
+import com.conveyal.analysis.components.BackendComponents;
 import com.conveyal.analysis.components.TaskScheduler;
 import com.conveyal.analysis.models.Bundle;
 import com.conveyal.analysis.persistence.Persistence;
@@ -59,7 +59,7 @@ public class BundleController implements HttpController {
     private final TaskScheduler taskScheduler;
     private final String bundleBucket;
 
-    public BundleController (Components components) {
+    public BundleController (BackendComponents components) {
         this.fileStorage = components.fileStorage;
         this.gtfsCache = components.gtfsCache;
         this.osmCache = components.osmCache;
